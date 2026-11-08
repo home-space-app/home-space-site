@@ -25,7 +25,12 @@
     <symbol id="i-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m4 18 5-5 4 4 2.5-2.5L20 19"/></symbol>
     <symbol id="i-bin" viewBox="0 0 24 24"><path d="M4 6h16M9 6V4h6v2M6 6l1 14h10l1-14M10 10v6M14 10v6"/></symbol>
     <symbol id="i-box" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="5" rx="1"/><path d="M5 9v11h14V9M10 13h4"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4M7.5 8.5 12 4l4.5 4.5M5 15v4h14v-4"/></symbol>
+    <symbol id="i-folder-add" viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2h8.4A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5Z"/><path d="M12 10.5v5M9.5 13h5"/></symbol>
+    <symbol id="i-drive" viewBox="0 0 24 24"><path d="M3 13.5 5.5 6h13l2.5 7.5V18H3Z"/><path d="M3 13.5h18M7 16h.01"/></symbol>
+    <symbol id="i-updown" viewBox="0 0 24 24"><path d="m8 9 4-4 4 4M8 15l4 4 4-4"/></symbol>
+    <symbol id="i-arrow"viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
     <symbol id="i-github" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
   </defs>
@@ -62,33 +67,32 @@
         <span>Web</span><span aria-hidden="true">·</span><span>Desktop</span><span aria-hidden="true">·</span><span>Android</span><span aria-hidden="true">·</span><span>iOS and iPadOS</span>
       </p>
 
-      <!-- Product shot: mirrors the real web UI -->
+      <!-- Product shot: mirrors the web client design in Penpot (Home Space Client › Web › Files) -->
       <div class="shot" aria-hidden="true">
         <div class="app app--sidebar">
           <aside class="app-side">
             <span class="app-side__brand"><img src="favicon.svg" alt="">Home Space</span>
-            <span class="app-side__item app-side__item--on"><svg class="ic ic--folder"><use href="#i-folder"/></svg>Files</span>
+            <span class="app-side__item app-side__item--on"><svg class="ic"><use href="#i-folder"/></svg>Files</span>
             <span class="app-side__item"><svg class="ic"><use href="#i-bin"/></svg>Recycle bin</span>
             <span class="app-side__item"><svg class="ic"><use href="#i-box"/></svg>Lost &amp; Found</span>
-            <span class="app-side__storage"><b>Storage</b><span class="progress"><span class="progress__fill progress__fill--part"></span></span><small>12.4 GB used · 1.8 TB free</small></span>
-            <span class="app-side__user"><span class="avatar">A</span><span><b>anna</b><small>Administrator</small></span></span>
+            <span class="app-side__storage"><b><svg class="ic"><use href="#i-drive"/></svg>Storage</b><span class="progress"><span class="progress__fill progress__fill--part"></span></span><small>12.4 GB used · 1.8 TB free</small></span>
+            <span class="app-side__user"><span class="avatar">S</span><b>sam</b><svg class="ic"><use href="#i-updown"/></svg></span>
           </aside>
           <div class="explorer">
             <div class="explorer__header">
-              <span class="crumb">Home</span><span class="crumb-sep">/</span><span class="crumb crumb--current">Family</span>
-              <span class="app-search">Search files and folders<kbd>Ctrl K</kbd></span>
-            </div>
-            <div class="explorer__actions">
-              <span class="button button--primary">Upload files</span>
-              <span class="button button--ghost">New folder</span>
+              <span class="explorer__title">Home</span>
+              <span class="app-search"><svg class="ic"><use href="#i-search"/></svg>Search files and folders</span>
+              <span class="button button--primary"><svg class="ic"><use href="#i-upload"/></svg>Upload</span>
+              <span class="button"><svg class="ic"><use href="#i-folder-add"/></svg>New folder</span>
             </div>
             <div class="node-table">
-              <div class="node-row node-row--head"><span class="cb"></span><span>Name ↑</span><span class="r">Size</span><span class="r">Modified</span></div>
-              <div class="node-row"><span class="cb"></span><span class="nm"><svg class="ic ic--folder"><use href="#i-folder"/></svg>Documents</span><span class="r"></span><span class="r">3 Nov 2026, 01:05</span></div>
-              <div class="node-row"><span class="cb"></span><span class="nm"><svg class="ic ic--folder"><use href="#i-folder"/></svg>Photos 2026</span><span class="r"></span><span class="r">6 Nov 2026, 18:22</span></div>
-              <div class="node-row node-row--selected"><span class="cb cb--on"></span><span class="nm"><svg class="ic"><use href="#i-file"/></svg>apartment-contract.pdf</span><span class="r">412.3 KB</span><span class="r">28 Oct 2026, 09:14</span></div>
-              <div class="node-row"><span class="cb"></span><span class="nm"><svg class="ic"><use href="#i-image"/></svg>beach-sunset.heic</span><span class="r">3.8 MB</span><span class="r">7 Nov 2026, 11:05</span></div>
-              <div class="node-row"><span class="cb"></span><span class="nm"><svg class="ic"><use href="#i-draft"/></svg>birthday.mp4</span><span class="r">1.2 GB</span><span class="r">1 Nov 2026, 20:40</span></div>
+              <div class="node-row node-row--head"><span>Name ↑</span><span>Size</span><span>Modified</span><span></span></div>
+              <div class="node-row"><span class="nm"><svg class="ic ic--folder"><use href="#i-folder"/></svg>Documents</span><span>—</span><span>5 Nov 2026, 20:55</span><span class="more">•••</span></div>
+              <div class="node-row"><span class="nm"><svg class="ic ic--folder"><use href="#i-folder"/></svg>Photos</span><span>—</span><span>2 Nov 2026, 11:05</span><span class="more">•••</span></div>
+              <div class="node-row"><span class="nm"><svg class="ic ic--folder"><use href="#i-folder"/></svg>Projects</span><span>—</span><span>6 Nov 2026, 21:40</span><span class="more">•••</span></div>
+              <div class="node-row"><span class="nm"><svg class="ic"><use href="#i-file"/></svg>report.pdf</span><span>412.3 KB</span><span>28 Oct 2026, 09:14</span><span class="more">•••</span></div>
+              <div class="node-row"><span class="nm"><svg class="ic"><use href="#i-image"/></svg>scan-2026-11-02.jpg</span><span>3.8 MB</span><span>2 Nov 2026, 11:05</span><span class="more">•••</span></div>
+              <div class="node-row"><span class="nm"><svg class="ic"><use href="#i-draft"/></svg>backup.tar.zst</span><span>1.4 GB</span><span>1 Nov 2026, 08:30</span><span class="more">•••</span></div>
             </div>
           </div>
         </div>
@@ -243,14 +247,14 @@
         <div class="client-view" id="view-web" role="tabpanel" aria-labelledby="tab-web">
           <div class="client-view__head">
             <h3>Web</h3>
-            <p>Open your server’s address in any browser. Files, recycle bin and settings in one sidebar — and an administration area for admins.</p>
+            <p>Open your server’s address in any browser. Files, the recycle bin and Lost &amp; Found sit in the sidebar; settings, and administration for admins, sit in the account menu.</p>
           </div>
           <div class="gallery" data-gallery>
             <figure class="browser">
               <div class="browser__bar" aria-hidden="true"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__url">files.home.lan</span></div>
               <picture data-shot>
                 <source media="(prefers-color-scheme: dark)" srcset="screens/web-files-dark.webp">
-                <img src="screens/web-files-light.webp" width="1600" height="1000" alt="Home Space web app showing the Home folder with the account menu open" loading="lazy">
+                <img src="screens/web-files-light.webp" width="1440" height="900" alt="Home Space web app showing the Home folder with the account menu open" loading="lazy">
               </picture>
             </figure>
             <div class="gallery__thumbs" role="group" aria-label="Web screens">
@@ -273,7 +277,7 @@
             <figure class="window">
               <picture data-shot>
                 <source media="(prefers-color-scheme: dark)" srcset="screens/desktop-browser-dark.webp">
-                <img src="screens/desktop-browser-light.webp" width="1600" height="1000" alt="Home Space desktop app showing the Home folder with sync status on each file" loading="lazy">
+                <img src="screens/desktop-browser-light.webp" width="1280" height="800" alt="Home Space desktop app showing the Home folder with sync status on each file" loading="lazy">
               </picture>
             </figure>
             <div class="gallery__thumbs" role="group" aria-label="Desktop screens">
@@ -294,21 +298,21 @@
             <figure class="phone">
               <picture>
                 <source media="(prefers-color-scheme: dark)" srcset="screens/android-browse-dark.webp">
-                <img src="screens/android-browse-light.webp" width="780" height="1688" alt="Home Space for Android browsing the Documents folder" loading="lazy">
+                <img src="screens/android-browse-light.webp" width="390" height="844" alt="Home Space for Android browsing the Documents folder with an upload in progress" loading="lazy">
               </picture>
               <figcaption>Files</figcaption>
             </figure>
             <figure class="phone">
               <picture>
                 <source media="(prefers-color-scheme: dark)" srcset="screens/android-transfers-dark.webp">
-                <img src="screens/android-transfers-light.webp" width="780" height="1688" alt="Home Space for Android transfers screen" loading="lazy">
+                <img src="screens/android-transfers-light.webp" width="390" height="844" alt="Home Space for Android transfers screen" loading="lazy">
               </picture>
               <figcaption>Transfers</figcaption>
             </figure>
             <figure class="phone">
               <picture>
                 <source media="(prefers-color-scheme: dark)" srcset="screens/android-settings-dark.webp">
-                <img src="screens/android-settings-light.webp" width="780" height="1688" alt="Home Space for Android settings screen" loading="lazy">
+                <img src="screens/android-settings-light.webp" width="390" height="844" alt="Home Space for Android settings screen" loading="lazy">
               </picture>
               <figcaption>Settings</figcaption>
             </figure>
@@ -319,54 +323,33 @@
         <div class="client-view" id="view-ios" role="tabpanel" aria-labelledby="tab-ios" hidden>
           <div class="client-view__head">
             <h3>iOS and iPadOS</h3>
-            <p>Feels like the Files app: tall rows, search in the title bar, and Quick Look to view and mark up files.</p>
+            <p>A native iOS look: large titles, floating controls for search and adding files, and a tab bar for files, transfers and settings.</p>
           </div>
-          <div class="phones" aria-hidden="true">
+          <div class="phones">
             <figure class="phone">
-              <div class="ios">
-                <div class="ios__status"><span>9:41</span><span class="ios__icons">▮▮▮ ◔</span></div>
-                <div class="ios__nav"><span class="ios__link">Select</span><span class="ios__btns"><span class="ios__link">＋</span><span class="ios__link">⋯</span></span></div>
-                <div class="ios__title">Home</div>
-                <div class="ios__search">Search Files and Folders</div>
-                <ul class="ios__list">
-                  <li><svg class="ic ic--folder"><use href="#i-folder"/></svg><div><b>Documents</b><span>3 Nov 2026, 01:05</span></div></li>
-                  <li><svg class="ic ic--folder"><use href="#i-folder"/></svg><div><b>Family</b><span>6 Nov 2026, 18:22</span></div></li>
-                  <li><svg class="ic ic--folder"><use href="#i-folder"/></svg><div><b>Photos 2026</b><span>7 Nov 2026, 11:05</span></div></li>
-                  <li><svg class="ic"><use href="#i-file"/></svg><div><b>report.pdf</b><span>412.3 KB · 28 Oct 2026, 09:14</span></div></li>
-                  <li><svg class="ic"><use href="#i-image"/></svg><div><b>beach-sunset.heic</b><span>3.8 MB · 7 Nov 2026, 11:05</span></div></li>
-                  <li><svg class="ic"><use href="#i-draft"/></svg><div><b>birthday.mp4</b><span>1.2 GB · 1 Nov 2026, 20:40</span></div></li>
-                  <li><svg class="ic"><use href="#i-file"/></svg><div><b>notes.txt</b><span>2.1 KB · 2 Nov 2026, 08:30</span></div></li>
-                </ul>
-                <div class="ios__home"></div>
-              </div>
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="screens/ios-browse-dark.webp">
+                <img src="screens/ios-browse-light.webp" width="393" height="852" alt="Home Space for iOS browsing the Documents folder with an upload in progress" loading="lazy">
+              </picture>
               <figcaption>Files</figcaption>
             </figure>
             <figure class="phone">
-              <div class="ios">
-                <div class="ios__status"><span>9:41</span><span class="ios__icons">▮▮▮ ◔</span></div>
-                <div class="ios__nav"><span class="ios__link">‹ Home</span><span class="ios__btns"><span class="ios__link ios__link--on">＋</span><span class="ios__link">⋯</span></span></div>
-                <div class="ios__title">Family</div>
-                <div class="ios__search">Search Files and Folders</div>
-                <ul class="ios__list ios__list--dim">
-                  <li><svg class="ic ic--folder"><use href="#i-folder"/></svg><div><b>Recipes</b><span>12 Oct 2026, 16:47</span></div></li>
-                  <li><svg class="ic"><use href="#i-file"/></svg><div><b>apartment-contract.pdf</b><span>412.3 KB · 28 Oct 2026, 09:14</span></div></li>
-                  <li><svg class="ic"><use href="#i-file"/></svg><div><b>insurance-2026.pdf</b><span>96.0 KB · 30 Sep 2026, 14:10</span></div></li>
-                  <li><svg class="ic"><use href="#i-image"/></svg><div><b>garden.jpg</b><span>2.4 MB · 4 Sep 2026, 10:02</span></div></li>
-                </ul>
-                <div class="ios__menu">
-                  <span>New Folder<svg class="ic"><use href="#i-folder"/></svg></span>
-                  <span>Upload Files<svg class="ic"><use href="#i-file"/></svg></span>
-                  <span>Upload Photos<svg class="ic"><use href="#i-image"/></svg></span>
-                </div>
-                <div class="ios__home"></div>
-              </div>
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="screens/ios-newmenu-dark.webp">
+                <img src="screens/ios-newmenu-light.webp" width="393" height="852" alt="Home Space for iOS with the add menu open, offering Upload files and New folder" loading="lazy">
+              </picture>
               <figcaption>Add menu</figcaption>
+            </figure>
+            <figure class="phone">
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="screens/ios-transfers-dark.webp">
+                <img src="screens/ios-transfers-light.webp" width="393" height="852" alt="Home Space for iOS transfers screen with uploads, auto-upload and offline copies" loading="lazy">
+              </picture>
+              <figcaption>Transfers</figcaption>
             </figure>
           </div>
         </div>
       </div>
-
-      <p class="shared-core">Every client talks to the same typed API through a shared Rust client — compiled to WebAssembly for the browser and bridged with UniFFI on mobile.</p>
     </div>
   </section>
 
