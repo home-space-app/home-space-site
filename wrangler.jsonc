@@ -1,0 +1,10 @@
+// Cloudflare Workers static-assets deployment for https://home-space.app/
+{
+  "name": "home-space-site",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./src"
+  },
+  // Required by `wrangler preview`, which Workers Builds runs for non-production branches.
+  "previews": {}
+}
