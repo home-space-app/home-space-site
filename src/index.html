@@ -3,12 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home Space — your files, on your own server</title>
-  <meta name="description" content="Home Space is an open-source, self-hosted file hosting app. Run it at home, on a VM or in the cloud with Docker, and reach your files from the web, desktop, Android and iOS.">
+  <title>Home Space: open-source, self-hosted cloud storage (Google Drive alternative)</title>
+  <meta name="description" content="Home Space is open-source, self-hosted cloud storage: a private Google Drive and Dropbox alternative you run at home, on a VM or in the cloud with Docker. Apps for web, desktop, Android and iOS.">
+  <link rel="canonical" href="https://home-space.app/">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#2563eb">
-  <meta property="og:title" content="Home Space — your files, on your own server">
-  <meta property="og:description" content="Open-source, self-hosted file hosting. One Docker Compose file. Web, desktop, Android and iOS clients.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Home Space">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://home-space.app/">
+  <meta property="og:title" content="Home Space: self-hosted cloud storage you own">
+  <meta property="og:description" content="Open-source, self-hosted file hosting and sync. One Docker Compose file. Web, desktop, Android and iOS apps.">
+  <meta property="og:image" content="https://home-space.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Home Space: your files, in your own space. Self-hosted cloud storage for web, desktop, Android and iOS.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Home Space: self-hosted cloud storage you own">
+  <meta name="twitter:description" content="Open-source, self-hosted file hosting and sync. One Docker Compose file. Web, desktop, Android and iOS apps.">
+  <meta name="twitter:image" content="https://home-space.app/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://home-space.app/#website",
+        "url": "https://home-space.app/",
+        "name": "Home Space",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://home-space.app/#software",
+        "name": "Home Space",
+        "url": "https://home-space.app/",
+        "description": "Open-source, self-hosted cloud storage and file sync. A private alternative to Google Drive and Dropbox, deployed with Docker Compose, with apps for web, desktop, Android and iOS.",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "File hosting and sync",
+        "operatingSystem": "Linux, Windows, macOS, Android, iOS, iPadOS, Web",
+        "image": "https://home-space.app/og-image.png",
+        "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "codeRepository": "https://github.com/home-space-app/home-space",
+        "programmingLanguage": "Rust",
+        "featureList": [
+          "Self-hosted with Docker Compose",
+          "Version history",
+          "Recycle bin",
+          "Resumable chunked uploads",
+          "Live updates across clients",
+          "Full-text search",
+          "OpenID Connect single sign-on",
+          "Desktop folder sync"
+        ],
+        "sameAs": ["https://github.com/home-space-app/home-space"]
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,7 +89,7 @@
     <symbol id="i-folder-add" viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.6l2 2h8.4A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5Z"/><path d="M12 10.5v5M9.5 13h5"/></symbol>
     <symbol id="i-drive" viewBox="0 0 24 24"><path d="M3 13.5 5.5 6h13l2.5 7.5V18H3Z"/><path d="M3 13.5h18M7 16h.01"/></symbol>
     <symbol id="i-updown" viewBox="0 0 24 24"><path d="m8 9 4-4 4 4M8 15l4 4 4-4"/></symbol>
-    <symbol id="i-arrow"viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
     <symbol id="i-github" viewBox="0 0 24 24"><path stroke="none" fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
   </defs>
@@ -58,7 +117,7 @@
     <div class="wrap">
       <a class="eyebrow" href="https://github.com/home-space-app/home-space" rel="noopener"><span class="dot"></span>Open source · AGPL-3.0 · Self-hosted</a>
       <h1>Your files, in <em>your own</em> space.</h1>
-      <p class="lede">Home Space is file hosting you run yourself — on a box at home, a VM or any cloud. One Docker Compose file on the server, and apps for web, desktop, Android and iOS.</p>
+      <p class="lede">Home Space is open-source cloud storage you run yourself — a private alternative to Google Drive and Dropbox. One Docker Compose file on the server, and apps for web, desktop, Android and iOS.</p>
       <div class="actions">
         <a class="button button--primary button--large" href="#quick-start">Get started <svg class="ic"><use href="#i-arrow"/></svg></a>
         <a class="button button--large" href="https://github.com/home-space-app/home-space" rel="noopener">View on GitHub</a>
